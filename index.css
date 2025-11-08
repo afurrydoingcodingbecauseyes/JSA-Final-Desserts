@@ -1,0 +1,117 @@
+* { box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .navPageLinks{
+      margin:0 10px; 
+      color:#ff6bb5; 
+      text-decoration:none; 
+      font-weight:500;
+      transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1)
+    }
+    .navPageLinks:hover{
+      color:#b30059
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #fff5f8 0%, #ffffff 100%);
+      border-bottom: 1px solid #f5dce4;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #d63384;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.1rem;
+      color: #666;
+    }
+    .scroll-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 24px;
+      background: #ff80aa;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    .scroll-btn:hover {
+      background: #ff4d88;
+      transform: translateY(-2px);
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #b30059;
+      text-align: left;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      border-left: 4px solid #ffd6e0;
+    }
+
+    .category {
+      margin-bottom: 50px;
+    }
+    .meal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .meal {
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      padding:10px
+    }
+    .meal:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .meal img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .meal h3 {
+      margin: 10px;
+      font-size: 1rem;
+      text-align: center;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+    .viewButton{
+      background-color:#b30059;
+      border-radius: 4px;
+      padding:5px;
+      color:white;
+      text-decoration: none;
+      font-weight:bold;
+      align-self:flex-end;
+  }
