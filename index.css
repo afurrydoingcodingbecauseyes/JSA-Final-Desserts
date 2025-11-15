@@ -1,31 +1,31 @@
 * { box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #ffffff;
+      background: #fffaee;
       color: #333;
       margin: 0;
       padding: 0;
     }
     .navPageLinks{
       margin:0 10px; 
-      color:#ff6bb5; 
+      color:#cd8742; 
       text-decoration:none; 
       font-weight:500;
       transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1)
     }
     .navPageLinks:hover{
-      color:#b30059
+      color:#b3702c
     }
 
     header {
       text-align: center;
       padding: 60px 20px 40px;
-      background: linear-gradient(180deg, #fff5f8 0%, #ffffff 100%);
+      background: linear-gradient(180deg, #fefae0 0%, #fffaee 100%);
       border-bottom: 1px solid #f5dce4;
     }
     header h1 {
       font-size: 2.5rem;
-      color: #d63384;
+      color: #bc6c25;
       margin-bottom: 10px;
     }
     header p {
@@ -36,7 +36,7 @@
       display: inline-block;
       margin-top: 25px;
       padding: 12px 24px;
-      background: #ff80aa;
+      background: #bc6c25;
       color: white;
       font-weight: 600;
       text-decoration: none;
@@ -45,18 +45,18 @@
       transition: all 0.3s ease;
     }
     .scroll-btn:hover {
-      background: #ff4d88;
+      background: #dda15e;
       transform: translateY(-2px);
     }
 
     h2 {
       font-size: 1.8rem;
-      color: #b30059;
+      color: #bc6c25;
       text-align: left;
       margin-top: 40px;
       margin-bottom: 10px;
       padding-left: 20px;
-      border-left: 4px solid #ffd6e0;
+      border-left: 4px solid #dda15e;
     }
 
     .category {
@@ -77,7 +77,10 @@
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       transition: all 0.3s ease;
-      padding:10px
+      padding:10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .meal:hover {
       transform: translateY(-4px);
@@ -87,10 +90,11 @@
       width: 100%;
       height: 160px;
       object-fit: cover;
+      border-radius: 10px;
     }
     .meal h3 {
       margin: 10px;
-      font-size: 1rem;
+      font-size: 0.95rem;
       text-align: center;
       color: #444;
     }
@@ -107,11 +111,11 @@
       scroll-behavior:smooth;
     }
     .viewButton{
-      background-color:#b30059;
+      background-color:#cd8742;
       border-radius: 4px;
       padding:5px;
       color:white;
       text-decoration: none;
       font-weight:bold;
-      align-self:flex-end;
+      align-self: flex-end;
   }
