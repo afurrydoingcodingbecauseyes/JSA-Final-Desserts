@@ -46,4 +46,23 @@ const container = document.getElementById('details');
       }
     }
 
-    loadDetails();
+// get current user from localStorage (null if not logged in)
+let currentUser = localStorage.getItem("currentUser");
+
+// if no user, show login message instead of recipe
+if (!currentUser || currentUser.trim() === "") {
+  container.innerHTML = `
+    <div style="text-align:center; padding:40px;">
+      <h2 style="color:#d63384;">Login to view this recipe? </h2>
+      <a href="login.html"
+         style="display:inline-block; margin-top:20px; padding:12px 22px; 
+                background:#d63384; color:white; border-radius:10px; 
+                text-decoration:none; font-size:1rem;">
+        Go to Login ✧
+      </a>
+    </div>
+  `;
+} else {
+  // user exists → load the recipe :3
+  loadDetails();
+}
