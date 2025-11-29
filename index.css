@@ -11,7 +11,9 @@
       color:#cd8742; 
       text-decoration:none; 
       font-weight:500;
-      transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1)
+      transition: color 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      background-color:rgba(0,0,0,0);
+      outline-color: rgba(0, 0, 0, 0);
     }
     .navPageLinks:hover{
       color:#b3702c
@@ -119,3 +121,62 @@
       font-weight:bold;
       align-self: flex-end;
   }
+
+  /* ===== Footer ===== */
+
+.site-footer {
+  background: #fff;
+  border-top: 1px solid #f5dce4;
+  padding: 40px 20px 20px;
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  text-align: left;
+  max-width: 300px;
+}
+
+.footer-logo {
+  width: 90px;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  color: #cd8742;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-links a {
+  color: #bc6c25;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.footer-links a:hover {
+  color: #cd8742;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  font-size: 0.85rem;
+  color:#cd8742;
+  margin-top: 15px;
+}

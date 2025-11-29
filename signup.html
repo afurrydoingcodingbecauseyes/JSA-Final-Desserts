@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +14,33 @@
       padding: 0;
       font-family: 'Poppins', sans-serif;
       background: #fffaee;
+    }
+
+    .page-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
 
+    a.back {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #dda15e;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+
     .login-box {
       width: 350px;
       padding: 35px 30px;
       background: #ffffff;
       border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
       text-align: center;
     }
 
@@ -38,7 +54,7 @@
     .input-group {
       text-align: left;
       margin-bottom: 20px;
-      
+
     }
 
     label {
@@ -99,35 +115,40 @@
     }
   </style>
 </head>
+
 <body>
+  <a href="index.html" class="back">← Back to Desserts</a>
 
-  <div class="login-box">
-    <h2>Welcome Back</h2>
+  <div class="page-wrapper">
+    <div class="login-box">
+      <h2>Welcome Back</h2>
 
-    <form >
-      <div class="input-group">
-        <label>Username</label>
-        <input type="text" placeholder="Enter your username" id="usernameInput">
-      </div>
+      <form>
+        <div class="input-group">
+          <label>Username</label>
+          <input type="text" placeholder="Enter your username" id="usernameInput">
+        </div>
 
-      <div class="input-group">
-        <label>Password</label>
-        <input type="password" placeholder="Enter your password" id="passInput">
-      </div>
+        <div class="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" id="passInput">
+        </div>
+        <div class="input-group">
+          <label>Repeat Password</label>
+          <input type="password" placeholder="Repeat your password" id="passInput">
+        </div>
 
-      <div class="input-group">
-        <label>Repeat Password</label>
-        <input type="password" placeholder="Repeat your password" id="repeatPassInput">
-      </div>
+        <button type="button" class="btn" onclick="signUp()">Log In</button>
+        <label id="notification"></label>
 
-      <button type="button" class="btn" onclick="signUp()">Register</button>
-      <label id="notification"></label>
-      
-      <div class="register">
-        Already have an account? <a href="login.html">Login here</a>
-      </div>
-    </form>
+        <div class="register">
+          Already have an account? <a href="login.html">Login</a>
+        </div>
+      </form>
+    </div>
   </div>
+
   <script src="auth.js"></script>
 </body>
+
 </html>

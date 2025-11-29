@@ -56,5 +56,20 @@ async function loadDesserts() {
     container.innerHTML = '<p style="text-align:center;color:#c00;">Error loading desserts ?_? </p>';
   }
 }
+async function logOut(){
+  localStorage.setItem("currentUser", "");
+  setTimeout(() => window.location.href = 'index.html', 1500);
+}
+async function loadNav() {
+  let currentUser = localStorage.getItem("currentUser");
+  nav = document.getElementById('nav')
+  // if no user, show login message instead of recipe
+  if (!currentUser || currentUser.trim() === "") { 
+    nav.innerHTML += '<div><a href="login.html"class="navPageLinks">Login</a><a href="signup.html" class="navPageLinks">Register</a></div>'
+  }else{
+    nav.innerHTML += '<button onclick="logOut()" type="button" class="navPageLinks">Logout</button>'
+  }
+}
 
 loadDesserts();
+loadNav();

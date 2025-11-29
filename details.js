@@ -1,7 +1,6 @@
 const container = document.getElementById('details');
     const apiBase = 'https://www.themealdb.com/api/json/v1/1/';
 
-    // Get meal ID from URL ?id=52776
     const params = new URLSearchParams(window.location.search);
     const mealId = params.get('id');
 
@@ -17,27 +16,32 @@ const container = document.getElementById('details');
           const ing = meal['strIngredient' + i];
           const measure = meal['strMeasure' + i];
           if (ing && ing.trim() !== '') {
-            ingredients.push(`${measure} ${ing}`);
+            ingredients.push(`${measure} ${ing}`.trim());
           }
         }
-        instruction = meal.strInstructions
-        instruction = instruction.replace(/\./g,'.<br><br>')
+
+        let instructionText = meal.strInstructions.replace(/\. \s*/g, '.<br><br>');
+
         container.innerHTML = `
           <h1>${meal.strMeal}</h1>
-          <img src="${meal.strMealThumb}" alt="${meal.strMeal}" >
-          <div class="section">
-            <h2>Ingredients</h2>
-            <ul>
-              ${ingredients.map(i => `<li>${i}</li>`).join('')}
-            </ul>
+          <div class="top-section">
+            <div class="meal-image">
+              <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+            </div>
+            <div class="ingredients-section">
+              <h2>Ingredients</h2>
+              <ul class="ingredients">
+                ${ingredients.map(i => `<li>${i}</li>`).join('')}
+              </ul>
+            </div>
           </div>
           <div class="section">
             <h2>Instructions</h2>
-            <p>${instruction}</p>
+            <p class="instructions">${instructionText}</p>
           </div>
-          ${meal.strYoutube ? `<div class="section">
+          ${meal.strYoutube ? `<div class="section video">
             <h2>Video</h2>
-            <a href="${meal.strYoutube}" target="_blank" style="background-color:#b30059;border-radius: 4px;padding:5px;color:white;text-decoration: none;font-weight:bold">Watch on YouTube</a>
+            <a href="${meal.strYoutube}" target="_blank">Watch on Youtube</a>
           </div>` : ''}
         `;
       } catch (err) {
@@ -53,10 +57,10 @@ let currentUser = localStorage.getItem("currentUser");
 if (!currentUser || currentUser.trim() === "") {
   container.innerHTML = `
     <div style="text-align:center; padding:40px;">
-      <h2 style="color:#d63384;">Login to view this recipe? </h2>
+      <h2 style="color:#bc6c25;">Login to view this recipe? </h2>
       <a href="login.html"
          style="display:inline-block; margin-top:20px; padding:12px 22px; 
-                background:#d63384; color:white; border-radius:10px; 
+                background:#bc6c25; color:white; border-radius:10px; 
                 text-decoration:none; font-size:1rem;">
         Go to Login ✧
       </a>
